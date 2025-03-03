@@ -39,4 +39,7 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
     });
 });
 
+app.get('/health',(req,res)=>{
+    res.status(200).send('API is healthy');
+})
 export default app; 
